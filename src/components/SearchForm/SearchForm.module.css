@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px;
+  background-color: rgb(81, 205, 178);
+}
+.formWrap {
+  position: relative;
+}
+.searchForm {
+  padding: 8px 14px 8px 35px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 320px;
+  border-radius: 6px;
+  outline: none;
+}
+.btn {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 38px;
+  border: none;
+  background-color: rgba(21, 233, 198, 0.197);
+  border-right: 1px solid black;
+  overflow: hidden;
+  border-top-left-radius: 6px;
+}
+.btnIcon{
+    height: 35px;
+}
