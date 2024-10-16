@@ -8,8 +8,10 @@ export default function ImageCard({
     likes,
     description,
     user: { name },
+    id,
   },
   onMouseEnter,
+  isHovered,
 }) {
   return (
     <div className={css.cardWrapper}>
@@ -17,9 +19,9 @@ export default function ImageCard({
         className={css.img}
         src={small}
         alt={description}
-        onMouseEnter={() => onMouseEnter(image.id)}
+        onMouseEnter={() => onMouseEnter(id)}
       />
-      <div className={css.infoWrap}>
+      <div className={clsx(css.infoWrap, isHovered && css.infoVisible)}>
         <p className={css.infoLogo}>
           Author:
           <span className={css.infoValue}>{name ? name : 'none'}</span>

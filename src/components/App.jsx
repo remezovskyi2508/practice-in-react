@@ -7,7 +7,7 @@ import ImageGallery from './ImageGallery/ImageGallery';
 function App() {
   const [searchValue, setSearchValue] = useState(''); // Working code for save search word...
   const [saveFetchData, setFetchData] = useState(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(true);
 
   function handleOnSubmitForm(event) {
     event.preventDefault();
@@ -21,7 +21,6 @@ function App() {
     setIsHovered(imageId);
     console.log(isHovered);
   }
-  function handleMouseLeave() {}
 
   const params = {
     url: 'https://api.unsplash.com/search/photos/',
@@ -49,7 +48,11 @@ function App() {
       <h1 className="header">Search your image</h1>
       <SearchForm onSubmit={handleOnSubmitForm} />
       {saveFetchData !== null && (
-        <ImageGallery data={saveFetchData} onMouseEnter={handleMouseEnter} />
+        <ImageGallery
+          data={saveFetchData}
+          onMouseEnter={handleMouseEnter}
+          isHovered={isHovered}
+        />
       )}
     </>
   );
