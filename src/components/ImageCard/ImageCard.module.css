@@ -18,7 +18,8 @@
   min-width: 300px;
   max-width: 450px;
   bottom: 0;
-  background-color: rgba(95, 158, 160, 0.581);
+  background-color: rgba(68, 106, 107, 0.581);
+  color: rgb(0, 255, 255);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
